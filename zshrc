@@ -3,6 +3,16 @@ alias c="clear"
 alias h="history"
 alias ..="cd .."
 alias p="cd -"
+alias wipe=" \
+rm -rf \
+~/Library/Caches/**/** \
+~/Library/Logs/**/** \
+~/Library/Application Support/Code/Cache/**/** \
+~/Library/Application Support/Code/Logs/**/** \
+~/Library/Application Support/Slack/Cache/**/** \
+~/Library/Application Support/Slack/Logs/**/** \
+; printf '\e[32;1mCleanup Succesfull\e[0m\n' \
+; brew cleanup"
 
 mkcdir ()
 {
