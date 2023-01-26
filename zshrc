@@ -20,6 +20,10 @@ mkcdir ()
 		cd -P -- "$1"
 }
 
+alias cv="cd ~/dev"
+alias dsclean="find . -name ".DS_Store" -print -delete"
+alias glo="git log --oneline"
+
 #for C lang
 alias cc="clang -Wall -Wextra -Werror *.c -o main"
 
