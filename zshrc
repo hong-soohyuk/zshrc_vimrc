@@ -14,6 +14,12 @@ rm -rf \
 ; printf '\e[32;1mCleanup Succesfull\e[0m\n' \
 ; brew cleanup"
 
+makefiledir ()
+{
+	for file in *."$1"; do mkdir -- "${file%."$1"}"; mv -- "$file" "${file%."$1"}"; done
+}
+
+
 mkcdir ()
 {
 	mkdir -p -- "$1" &&
