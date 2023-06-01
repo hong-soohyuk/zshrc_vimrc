@@ -19,7 +19,6 @@ makefiledir ()
 	for file in *."$1"; do mkdir -- "${file%."$1"}"; mv -- "$file" "${file%."$1"}"; done
 }
 
-
 mkcdir ()
 {
 	mkdir -p -- "$1" &&
@@ -28,7 +27,15 @@ mkcdir ()
 
 alias cv="cd ~/dev"
 alias dsclean="find . -name ".DS_Store" -print -delete"
+
+#for git
+gc ()
+{
+	git checkout "$1"
+}
 alias glo="git log --oneline"
+alias gb="git branch"
+
 
 #for C lang
 alias cc="clang -Wall -Wextra -Werror *.c -o main"
